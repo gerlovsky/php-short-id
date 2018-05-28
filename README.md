@@ -1,4 +1,7 @@
 # PHP Short ID creator
+
+[![Build Status](https://travis-ci.org/gerlovsky/php-short-id.svg?branch=master)](https://travis-ci.org/gerlovsky/php-short-id)
+
 The library help you generate short id like youtube, vimeo, bit.ly, etc. Short generation (creation) based on numerical ID. 
 
 ## Simple scenarios of using
