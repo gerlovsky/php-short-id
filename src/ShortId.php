@@ -63,7 +63,7 @@ class ShortId
      */
     public static function isValid($value, $length = null, $alphabet = null)
     {
-        $length = $length ?? self::getFactory()->getLength();
+        $length = $length ? $length : self::getFactory()->getLength();
         $alphabet = preg_quote($alphabet ?: self::getFactory()->getAlphabet(), '/');
         $matches = [];
         $ok = preg_match('/^(['.$alphabet.']{'.$length.'})$/', $value, $matches);
