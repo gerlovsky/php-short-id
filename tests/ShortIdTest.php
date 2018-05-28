@@ -2,7 +2,6 @@
 
 namespace Gerlovsky\ShortId\Tests;
 
-use Gerlovsky\ShortId\Factory;
 use Gerlovsky\ShortId\ShortId;
 use PHPUnit\Framework\TestCase;
 

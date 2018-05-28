@@ -4,12 +4,12 @@ namespace Gerlovsky\ShortId;
 
 class Factory
 {
-    private $length = 4;
+    private $length = 7;
 
     /**
      * @var string
      */
-    private $alphabet = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_';
+    private $alphabet = 'abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_-';
 
     /**
      * @return int

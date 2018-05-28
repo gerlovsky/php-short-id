@@ -17,16 +17,14 @@ class FactoryTest extends TestCase
     protected function setUp()
     {
         $this->factory = new Factory();
-//        $this->factory->setLength(6);
+        $this->factory->setLength(5);
     }
 
     public function testEncodeAndDecode()
     {
         $id = rand(10000, 99999);
 
-        $encodeId = $this->factory->encode($id, 6);
-        var_dump($id, $encodeId);die();
-
+        $encodeId = $this->factory->encode($id);
         $decodeId = $this->factory->decode($encodeId);
 
         $this->assertEquals($id, $decodeId);
@@ -70,13 +68,12 @@ class FactoryTest extends TestCase
 
     /**
      * @param string $alphabet
+     * @expectedException \InvalidArgumentException
      *
      * @dataProvider wrongAlphabetsProvider
      */
     public function testSetWrongAlphabet($alphabet)
     {
-        $this->expectException(\InvalidArgumentException::class);
-
         $this->factory->setAlphabet($alphabet);
     }
 
@@ -105,17 +102,19 @@ class FactoryTest extends TestCase
         $this->assertNull($null);
     }
 
+    /**
+     * @expectedException \InvalidArgumentException
+     */
     public function testSetWrongLengthType()
     {
-        $this->expectException(\InvalidArgumentException::class);
-
         $this->factory->setLength('invalid');
     }
 
+    /**
+     * @expectedException \InvalidArgumentException
+     */
     public function testSetWrongLengthRange()
     {
-        $this->expectException(\InvalidArgumentException::class);
-
         $this->factory->setLength(0);
     }
 }
