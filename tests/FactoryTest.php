@@ -85,7 +85,7 @@ class FactoryTest extends TestCase
     {
         return [
             'test' => ['test'],
-            'rand' => [sha1(random_int(0, getrandmax()))],
+            'rand' => [sha1(rand(0, getrandmax()))],
         ];
     }
 
