@@ -58,7 +58,7 @@ class FactoryTest extends TestCase
      *
      * @dataProvider alphabetsProvider
      */
-    public function testSetAlphabet(string $alphabet)
+    public function testSetAlphabet($alphabet)
     {
         $this->factory->setAlphabet($alphabet);
         $newAlphabet = Assert::readAttribute($this->factory, 'alphabet');
