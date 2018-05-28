@@ -66,7 +66,7 @@ class Factory
         return true;
     }
 
-    public function checkAlphabet(string $alphabet = null, bool $strict = false)
+    public function checkAlphabet($alphabet = null, $strict = false)
     {
         if (null === $alphabet && !$strict) {
             return;
