@@ -1,0 +1,29 @@
+{
+	"name": "gerlovsky/php-short-id",
+	"type": "library",
+	"description": "Short ID generator. The library help you generate short id like youtube, vimeo, bit.ly, etc.",
+	"homepage": "https://github.com/Gerlovsky/php-short-id",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Gerlovsky Ruslan",
+			"email": "Gerlovsky.Ruslan@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.2 || ^7.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Gerlovsky\\ShortId\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Gerlovsky\\ShortId\\Tests\\": "tests"
+		}
+	}
+}
